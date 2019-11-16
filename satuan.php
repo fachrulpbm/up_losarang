@@ -46,10 +46,9 @@
     /* SUBMIT */
     if(isset($_POST['btnSatuan'])){
         $kd_satuan = $_POST['kd_satuan'];
-        $nm_satuan = $_POST['nm_satuan'];        
-
+        $nm_satuan = $_POST['nm_satuan'];
         /* UPDATE */
-        if($_GET['aksi'] == 'ubah'){
+        if(isset($_GET['aksi'])){
             $update = "UPDATE satuan SET nm_satuan='$nm_satuan' WHERE kd_satuan='$kd_satuan'";
             mysqli_query($koneksi, $update);
             header("Location: satuan.php");
@@ -61,6 +60,16 @@
         }
     }
     /* END OF SUBMIT */
+
+    /* DELETE */
+    if( isset($_GET['kd_satuan']) && $_GET['aksi'] == 'hapus' ){
+        
+        $kode = $_GET['kd_satuan'];
+        $delete = " DELETE FROM satuan WHERE kd_satuan='$kode' ";
+        mysqli_query($koneksi, $delete);
+        header('Location: satuan.php');
+
+    }
 
     /* READ */
     $read = "SELECT * FROM satuan";
