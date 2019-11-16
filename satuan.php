@@ -9,6 +9,8 @@
         <tr align="center">
             <td colspan=3>
                 <h2>Satuan</h2>
+                <a href="index.php">Home</a>
+                <a href="satuan_konversi.php">Konversi</a>
             </td>
         </tr>
 
