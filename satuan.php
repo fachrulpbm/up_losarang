@@ -1,6 +1,6 @@
  <?php
     include_once('koneksi.php');
- ?>
+    ?>
  <form action="" method="post" name="form_satuan">
      <table align="center">
          <tr align="center">
@@ -33,14 +33,15 @@
  </form>
 
  <br>
+ <br>
 
- <form action="index.php?menu=satuan" method="get">
-     <table align="center" width="600px" style="margin-bottom: 10px">
+ <form action="" method="post">
+     <table align="center" width="720px" style="margin-bottom: 10px">
          <tr align="left">
              <td>
                  Cari Satuan:
-                 <input type="text" name="cari_satuan" id="txtCari" size="30" placeholder="Masukkan kode atau nama satuan">
-                 <input type="submit" value="Cari" name="btnCari">
+                 <input type="text" name="cari" size="20">
+                 <input type="submit" name="btnCari" value="Cari">
              </td>
          </tr>
      </table>
@@ -77,16 +78,16 @@
 
     /* READ <---------------- Bagian ini yang masih belum fix*/
     echo "
-        <table border='1' class='data' align='center' width='600px'>
+        <table border='1' class='data' align='center' width='720px'>
             <tr>
-                <th class='data-td' width='20%'>Kode Satuan</th>
+                <th class='data-td' width='8%'>Kode</th>
                 <th class='data-td'>Nama Satuan</th>
-                <th class='data-td' width='17%'>Aksi</th>
+                <th class='data-td' width='13%'>Aksi</th>
             </tr>
         ";
-    if (isset($_GET['btnCari']) && isset($_GET['cari_satuan']) ) {
-        $cari = $_GET['cari_satuan'];
-        $read = "SELECT * FROM satuan WHERE kd_satuan OR nm_satuan LIKE '%$cari%'";
+    if (isset($_POST['cari']) && $_POST['btnCari']) {
+        $cari = $_POST['cari'];
+        $read = "SELECT * FROM satuan WHERE kd_satuan LIKE '%$cari%' OR nm_satuan LIKE '%$cari%'";
     } else {
         $read = "SELECT * FROM satuan";
     }
@@ -134,4 +135,4 @@
  <?php
     }
     /* END OF GET DATA */
- ?>
+    ?>

@@ -17,11 +17,11 @@ include_once('koneksi.php');
             </td>
         </tr>
         <tr>
-            <td>Kode Satuan</td>
+            <td>Nama Satuan</td>
             <td>:</td>
             <td>
                 <select name="satuan" style="width: 150px">
-                    <option value="default">-- pilih satuan --</option>
+                    <option value="default">-- Pilih Satuan --</option>
                     <?php
                     $tampil_satuan = "SELECT * FROM satuan ORDER BY kd_satuan ASC";
                     $hasil = mysqli_query($koneksi, $tampil_satuan);

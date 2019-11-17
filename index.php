@@ -19,40 +19,38 @@
 </head>
 
 <body>
-
-    <table border="0" align="center" width="600px">
+    <table border="0" align="center" style="border-collapse: collapse" width="720px">
         <tr>
-            <td colspan="3" align="center">
+            <td colspan="8" align="center">
                 <h2>Unit Produksi SMKN 1 Losarang</h2>
             </td>
         </tr>
         <tr>
-            <td width="70%">
-                <a href="index.php">
-                    <h3>
-                        Home
-                    </h3>
-                </a>
-            </td>
             <td align="center">
-                <a href="index.php?menu=satuan">Satuan</a>
-            </td>
-            <td align="center">
-                <a href="index.php?menu=konversi">Konversi</a>
+                <a href="index.php">Home</a> |
+                <a href="index.php?menu=satuan">Satuan</a> |
+                <a href="index.php?menu=konversi">Konversi</a> |
+                <a href="index.php?menu=produk">Produk</a> |
+                <a href="index.php?menu=mpengeluaran">Master Pengeluaran</a> |
+                <a href="index.php?menu=mpemasukan">Master Pemasukan</a> |
+                <br>
+                <a href="index.php?menu=transbeli">Transaksi Pembelian</a> |
+                <a href="index.php?menu=transpengeluaran">Transaksi Pengeluaran</a> |
+                <a href="index.php?menu=transjual">Transaksi Penjualan</a> |
+                <a href="index.php?menu=transpemasukan">Transaksi Pemasukan</a>
             </td>
         </tr>
     </table>
 
     <?php
-        if (isset($_GET['menu'])) {
-            if ($_GET['menu'] == 'satuan') {
-                include_once('satuan.php');
-            }elseif ($_GET['menu'] == 'konversi') {
-                include_once('satuan_konversi.php');
-            }
+    if (isset($_GET['menu'])) {
+        if ($_GET['menu'] == 'satuan') {
+            include_once('satuan.php');
+        } elseif ($_GET['menu'] == 'konversi') {
+            include_once('satuan_konversi.php');
         }
+    }
     ?>
-
 
 </body>
 
