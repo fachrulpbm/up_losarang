@@ -1,3 +1,5 @@
 <?php
-    $koneksi = mysqli_connect('localhost','root','root','up_losarang');
+    $koneksi = mysqli_connect(
+        'localhost','root','','up_losarang'
+    );
 ?>
