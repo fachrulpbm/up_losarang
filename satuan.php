@@ -86,12 +86,11 @@
         ";
     if (isset($_GET['btnCari']) && isset($_GET['cari_satuan']) ) {
         $cari = $_GET['cari_satuan'];
-        $search = "SELECT * FROM satuan WHERE kd_satuan OR nm_satuan LIKE '%$cari%'";
-        $data = mysqli_query($koneksi, $search);
+        $read = "SELECT * FROM satuan WHERE kd_satuan OR nm_satuan LIKE '%$cari%'";
     } else {
         $read = "SELECT * FROM satuan";
-        $data = mysqli_query($koneksi, $read);
     }
+    $data = mysqli_query($koneksi, $read);
     if ($data->num_rows > 0) {
         while ($row = mysqli_fetch_array($data)) {
             echo "
