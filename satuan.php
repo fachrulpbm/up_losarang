@@ -84,10 +84,10 @@
                 <th class='data-td' width='17%'>Aksi</th>
             </tr>
         ";
-    if (isset($_GET['btnCari']) && $_GET['cari_satuan']) {
+    if (isset($_GET['btnCari']) && isset($_GET['cari_satuan']) ) {
         $cari = $_GET['cari_satuan'];
         $search = "SELECT * FROM satuan WHERE kd_satuan LIKE '$cari'";
-        $data = mysqli_query($koneksi, $read);
+        $data = mysqli_query($koneksi, $search);
     } else {
         $read = "SELECT * FROM satuan";
         $data = mysqli_query($koneksi, $read);
