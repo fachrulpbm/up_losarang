@@ -34,7 +34,7 @@
 
  <br>
 
- <form action="index.php?menu=satuan&" method="get">
+ <form action="index.php?menu=satuan" method="get">
      <table align="center" width="600px" style="margin-bottom: 10px">
          <tr align="left">
              <td>
@@ -86,7 +86,7 @@
         ";
     if (isset($_GET['btnCari']) && isset($_GET['cari_satuan']) ) {
         $cari = $_GET['cari_satuan'];
-        $search = "SELECT * FROM satuan WHERE kd_satuan LIKE '$cari'";
+        $search = "SELECT * FROM satuan WHERE kd_satuan OR nm_satuan LIKE '%$cari%'";
         $data = mysqli_query($koneksi, $search);
     } else {
         $read = "SELECT * FROM satuan";
