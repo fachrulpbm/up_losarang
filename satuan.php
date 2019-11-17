@@ -76,7 +76,7 @@
     }
     /* END OF DELETE */
 
-    /* READ <---------------- Bagian ini yang masih belum fix*/
+    /* READ */
     echo "
         <table border='1' class='data' align='center' width='720px'>
             <tr>
