@@ -1,7 +1,3 @@
-<?php
-include_once('koneksi.php');
-?>
-
 <form action="" method="post">
     <table align="center">
         <tr align="center">

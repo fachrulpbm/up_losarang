@@ -1,6 +1,3 @@
- <?php
-    include_once('koneksi.php');
-    ?>
  <form action="" method="post" name="form_satuan">
      <table align="center">
          <tr align="center">

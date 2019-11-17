@@ -1,3 +1,7 @@
+<?php
+include_once('koneksi.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +31,7 @@
         </tr>
         <tr>
             <td align="center">
-                <a href="index.php">Home</a> |
+                <a href="index.php?menu=home">Home</a> |
                 <a href="index.php?menu=satuan">Satuan</a> |
                 <a href="index.php?menu=konversi">Konversi</a> |
                 <a href="index.php?menu=produk">Produk</a> |
@@ -47,7 +51,23 @@
         if ($_GET['menu'] == 'satuan') {
             include_once('satuan.php');
         } elseif ($_GET['menu'] == 'konversi') {
-            include_once('satuan_konversi.php');
+            include_once('konversi.php');
+        } elseif ($_GET['menu'] == 'produk') {
+            include_once('produk.php');
+        } elseif ($_GET['menu'] == 'mpengeluaran') {
+            include_once('mpengeluaran.php');
+        } elseif ($_GET['menu'] == 'mpemasukan') {
+            include_once('mpemasukan.php');
+        } elseif ($_GET['menu'] == 'transbeli') {
+            include_once('transbeli.php');
+        } elseif ($_GET['menu'] == 'transpengeluaran') {
+            include_once('transpengeluaran.php');
+        } elseif ($_GET['menu'] == 'transjual') {
+            include_once('transjual.php');
+        } elseif ($_GET['menu'] == 'transpemasukan') {
+            include_once('transpemasukan.php');
+        } elseif ($_GET['menu'] == 'home') {
+            include_once('home.php');
         }
     }
     ?>
