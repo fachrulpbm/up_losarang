@@ -21,10 +21,11 @@ CREATE TABLE produk(
     nm_produk varchar (45) not null,
     qty int(11) not null,
     kd_konversi varchar (6) not null,
-    hrg_beli INT (11),
     hrg_jual int (11),
-    FOREIGN KEY (kd_konversi) 
-    REFERENCES satuan_konversi (kd_konversi)
+    kd_satuan varchar (6) not null,
+    hrg_beli INT (11),
+    FOREIGN KEY (kd_konversi) REFERENCES satuan_konversi (kd_konversi),
+    FOREIGN KEY (kd_satuan) REFERENCES satuan_konversi (kd_satuan)
 )ENGINE=INNODB;
 
 CREATE TABLE trb(

@@ -9,14 +9,14 @@
              <td>Kode Satuan</td>
              <td>:</td>
              <td>
-                 <input type="text" name="kd_satuan" id="kd_satuan" size="5">
+                 <input type="text" name="kd_satuan" id="kd_satuan" size="20" required>
              </td>
          </tr>
          <tr>
              <td>Nama Satuan</td>
              <td>:</td>
              <td>
-                 <input type="text" name="nm_satuan" id="nm_satuan">
+                 <input type="text" name="nm_satuan" id="nm_satuan" size="30" required> 
              </td>
          </tr>
          <tr>
@@ -29,7 +29,6 @@
      </table>
  </form>
 
- <br>
  <br>
 
  <form action="" method="post">
@@ -77,7 +76,7 @@
     echo "
         <table border='1' class='data' align='center' width='720px'>
             <tr>
-                <th class='data-td' width='8%'>Kode</th>
+                <th class='data-td' width='20%'>Kode</th>
                 <th class='data-td'>Nama Satuan</th>
                 <th class='data-td' width='13%'>Aksi</th>
             </tr>
